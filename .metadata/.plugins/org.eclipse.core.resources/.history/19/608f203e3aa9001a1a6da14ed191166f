@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+import org.testng.annotations.Test;
+
+public class Test {
+	
+	@org.testng.annotations.Test
+	public void streamFilter() {
+		
+		ArrayList<String> names =new ArrayList<String>();
+		names.add("Muthu");
+		names.add("Abijit");
+		names.add("Sankar");
+		names.add("Appadurai");
+		names.add("Anu");
+
+		System.out.println(names.stream().filter(s -> s.startsWith("A")).count());
+		
+		
+	}
+
+}

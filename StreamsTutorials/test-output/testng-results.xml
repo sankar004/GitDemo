@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="42" started-at="2020-06-10T10:48:08 JST" finished-at="2020-06-10T10:48:08 JST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="42" started-at="2020-06-10T10:48:08 JST" finished-at="2020-06-10T10:48:08 JST">
+      <class name="Test">
+        <test-method status="PASS" signature="streamFilter()[pri:0, instance:Test@5f9d02cb]" name="streamFilter" duration-ms="15" started-at="2020-06-10T10:48:08 JST" finished-at="2020-06-10T10:48:08 JST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- streamFilter -->
+      </class> <!-- Test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

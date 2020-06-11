@@ -1,0 +1,35 @@
+package dataDriven.excelDataProvider;
+
+import java.io.FileInputStream;
+
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+public class DataProvide {
+
+	@Test(dataProvider = "driveTest")
+	public void testCaseData(String greeting, String comm , int id) {
+		
+		System.out.println(greeting + comm + id);
+	}
+	
+	@DataProvider(name="driveTest")
+	public Object[][] getData() {
+	
+		//Object[][] data = {{"hello", "test",1},{"bye", "message",143},{"solo", "call",420}};
+		
+		FileInputStream fls = new FileInputStream("excelDriven.xlsx");					
+		XSSFWorkbook wb= new XSSFWorkbook(fls);
+		XSSFSheet ws = wb.getSheetAt(0);
+		int rowCount = ws.getPhysicalNumberOfRows();
+		XSSFRow row = ws.getRow(0);
+		int columnCount = row.getLastCellNum();
+		Object[][] data = new Object[rowCount-1][columnCount];
+		
+		return data;
+	}
+	
+}

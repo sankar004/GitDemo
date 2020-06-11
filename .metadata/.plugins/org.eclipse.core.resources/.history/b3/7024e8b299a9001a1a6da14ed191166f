@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+
+
+public class Test {
+	
+	@org.testng.annotations.Test
+	public void streamFilter() {
+		
+		ArrayList<String> names =new ArrayList<String>();
+		names.add("Muthu");
+		names.add("Abijit");
+		names.add("Sankar");
+		names.add("Appadurai");
+		names.add("Anu");
+		
+		System.out.println(names.stream().filter(s -> s.startsWith("A")).count());
+		long d = names.stream().filter(s->
+		{
+			s.startsWith("A");
+			return true;
+		}
+		).count();
+		System.out.println(d);	
+		
+		names.stream().filter(s -> s.length()>4).forEach(s -> System.out.println(s)); 
+		names.stream().filter(s -> s.length()>4).limit(1).forEach(s -> System.out.println(s););
+		
+	}
+
+}
